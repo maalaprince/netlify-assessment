@@ -33,19 +33,24 @@ function App() {
           </p>
         </section>
 
-        <section>
-          <h2>3. Favorite and least favorite activities</h2>
-          <p>
-            <strong>Favorites:</strong> Debugging and troubleshooting technical
-            issues, writing documentation, helping customers understand
-            technical concepts, and improving internal processes.
-          </p>
-          <p>
-            <strong>Least favorites:</strong> Debugging builds in frameworks
-            I’ve never used before or managing live customer issues during a
-            service outage.
-          </p>
-        </section>
+          <section>
+      <h2>3. Favorite and least favorite activities</h2>
+
+      <p><strong>Favorites:</strong></p>
+      <ul>
+        <li>Debugging and troubleshooting technical issues</li>
+        <li>Writing clear, helpful documentation</li>
+        <li>Helping customers understand technical concepts</li>
+        <li>Learning new technologies and tools</li>
+        <li>Improving internal support processes</li>
+      </ul>
+
+      <p><strong>Least favorites:</strong></p>
+      <ul>
+        <li>Debugging builds in frameworks I’ve never used before</li>
+        <li>Managing live customer issues during a service outage</li>
+      </ul>
+    </section>
       </main>
 
       <footer className="footer">
