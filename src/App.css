@@ -1,21 +1,21 @@
+/* General page styling */
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: linear-gradient(to bottom right, #eef2ff, #f9fafb);
+  background-color: #f5f7fa;
   font-family: "Inter", system-ui, Arial, sans-serif;
   color: #1f2937;
 }
 
-/* Main layout */
+/* Container */
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 3rem 1.5rem;
+  padding: 3rem 1rem;
   min-height: 100vh;
 }
 
@@ -26,59 +26,72 @@ body,
 }
 
 .header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.3rem;
   color: #111827;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   color: #6b7280;
-  font-size: 1.1rem;
-  margin-top: 0.25rem;
+  font-size: 1rem;
 }
 
-/* Content area */
+/* Main content area */
 .content {
   width: 100%;
-  max-width: 900px;
+  max-width: 850px;
 }
 
-/* Section styling */
+/* Each section (question + answer) */
 section {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 2rem;
-  margin-bottom: 1.75rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #3b82f6;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* Section titles */
+/* Section title */
 h2 {
   color: #2563eb;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
-/* Paragraphs and list */
-p, li {
+/* Bold question text */
+b {
+  color: #1e293b;
+}
+
+/* Paragraphs and lists */
+p,
+li {
   font-size: 1.05rem;
   line-height: 1.7;
   color: #374151;
 }
 
 ul {
-  padding-left: 1.5rem;
-  margin: 0.75rem 0 1.25rem 0;
+  margin: 0.75rem 0 1.25rem 1.25rem;
+  padding-left: 1rem;
 }
 
-strong {
-  color: #111827;
+/* Code block styling */
+.code-block {
+  background: #1e293b;
+  color: #e5e7eb;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  margin-top: 0.75rem;
 }
 
 /* Footer */
@@ -91,12 +104,12 @@ strong {
   border-top: 1px solid #e5e7eb;
 }
 
-/* Fade-in animation */
+/* Smooth fade-in for sections */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 section {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
 }
