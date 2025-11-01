@@ -4,10 +4,15 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
-      <header className="header">
-        <h1>Netlify Assessment</h1>
-        <p className="subtitle">By Prince Leonard Maala</p>
-      </header>
+        <header className="header">
+          <h1>Netlify Assessment</h1>
+          <p className="subtitle">
+            This website offers my completed evaluation for the <strong>Web Development Tech Support</strong> position. 
+            Below are my replies to all assessment questions, as well as technical samples of redirection and serverless operations.
+          </p>
+          <p className="author">By Prince Leonard Maala</p>
+        </header>
+
 
       <main className="content">
         <section>
