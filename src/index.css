@@ -1,4 +1,4 @@
-
+/* index.css */
 :root {
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -47,4 +47,9 @@ button {
   background-color: #2563eb;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
