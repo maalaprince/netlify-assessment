@@ -1,121 +1,120 @@
-import './App.css'
+import React from "react";
+import "./App.css";
 
 function App() {
   return (
-    <div
-      className="container"
-      style={{
-        padding: '2rem',
-        maxWidth: '900px',
-        margin: '0 auto',
-        fontFamily: 'Arial, sans-serif',
-        lineHeight: '1.6',
-      }}
-    >
-      <h1 style={{ textAlign: 'center' }}>Netlify Assessment</h1>
+    <div className="app-container">
+      <header className="header">
+        <h1>Netlify Assessment</h1>
+        <p className="subtitle">By Prince Leonard Maala</p>
+      </header>
 
-      <section>
-        <h2>1. How I Made My Site</h2>
-        <p>
-          I created this site using <strong>Vite</strong> and <strong>React</strong> because they’re lightweight and fast to set up.
-          I chose these tools since Vite provides instant development previews and optimized builds.
-          The most challenging part was fixing the “Site not found” error on Netlify.
-          I solved it by adding a <code>_redirects</code> file inside the public folder with the rule <code>/* /index.html 200</code>.
-        </p>
-      </section>
+      <main className="content">
+        <section>
+          <h2>1. How I made my site</h2>
+          <p>
+            I built this site using <strong>Vite + React</strong> for fast and
+            modern development. It’s deployed on <strong>Netlify</strong> for
+            automatic builds and easy continuous deployment. One challenge I
+            faced was configuring the correct <code>publish directory</code> for
+            Netlify, but I fixed it by pointing to the <code>dist</code> folder
+            in the site settings.
+          </p>
+        </section>
 
-      <section>
-        <h2>2. My Thoughts on the Service</h2>
-        <p>
-          Netlify makes deployment smooth and easy. I was impressed by the automatic detection of my framework
-          and the ability to deploy directly from GitHub. One improvement I’d suggest is clearer error messages
-          when the build fails — that would help beginners troubleshoot faster.
-        </p>
-      </section>
+        <section>
+          <h2>2. Feedback about the service</h2>
+          <p>
+            The auto-deployment from GitHub commits and transparent build logs are two features that I found appealing about Netlify's developer experience. The building procedure seems straightforward and accessible to novices.
+          </p>
+        </section>
 
-      <section>
-        <h2>3. Favorite & Least Favorite Activities</h2>
-        <p><strong>My Top 5 Favorite Activities:</strong></p>
-        <ul>
-          <li>Solving customer problems through troubleshooting</li>
-          <li>Learning new technologies</li>
-          <li>Automating tasks with scripts or tools</li>
-          <li>Collaborating with a team to fix issues</li>
-          <li>Writing technical documentation</li>
-        </ul>
+        <section>
+          <h2>3. Favorite and least favorite activities</h2>
+          <p>
+            <strong>Favorites:</strong> Debugging and troubleshooting technical issues, Writing clear, helpful documentation,
+              Helping customers understand technical concepts, Learning new technologies and tools, 5.	Improving internal support processes.
+          </p>
+          <p>
+            <strong>Least favorites:</strong> Debug a customer's build using a programming language and framework that you've never seen before,
+            Manage a Support team,Help manage communications during a service outage, Respond to Netlify customers on Twitter , and Work with prospective customers to explain our service and the pricing model.
+          </p>
+        </section>
 
-        <p><strong>My 5 Least Favorite Activities:</strong></p>
-        <ul>
-          <li>Doing repetitive manual work</li>
-          <li>Unclear bug reports with no logs</li>
-          <li>Waiting for DNS propagation</li>
-          <li>Handling unrelated administrative tasks</li>
-          <li>Reading extremely long policy documents</li>
-        </ul>
-      </section>
+        <section>
+          <h2>4. Great documentation example</h2>
+          <p>
+            I think the{" "}
+            <a
+              href="https://developer.mozilla.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MDN Web Docs
+            </a>{" "}
+            are excellent — they provide clear explanations, example code, and
+            real-world use cases for developers of all levels.
+          </p>
+        </section>
 
-      <section>
-        <h2>4. Example of Great Documentation</h2>
-        <p>
-          I think the <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> are one of the best examples of developer documentation.
-          They provide detailed explanations, practical code examples, and consistent structure, making it easy for developers of any skill level to understand.
-        </p>
-      </section>
+        <section>
+          <h2>5. DNS challenges for less-technical users</h2>
+          <p>
+            The first challenge is understanding DNS record types such as A,
+            CNAME, and TXT — they can be confusing to configure. The second
+            challenge is DNS propagation delays, which can cause uncertainty
+            since changes take time to take effect globally.
+          </p>
+        </section>
 
-      <section>
-        <h2>5. DNS Challenges for Less-Technical Users</h2>
-        <p>
-          Two common challenges are understanding DNS record types and propagation delays.
-          Many users struggle to differentiate between A, CNAME, and TXT records, or don’t know how to verify propagation after changes.
-          Additionally, the waiting time for DNS updates to take effect can cause confusion when setting up domains or SSL certificates.
-        </p>
-      </section>
+        <section>
+          <h2>6. Troubleshooting “site won’t build”</h2>
+          <p>
+            I would start by reviewing the build logs for details and checking
+            for missing dependencies or incorrect build commands. I would reply
+            to the customer by acknowledging the issue, explaining that I’ll
+            investigate, and requesting their latest commit or configuration
+            details if needed.
+          </p>
+        </section>
 
-      <section>
-        <h2>6. Troubleshooting “Site Won’t Build” (Exit Code 2)</h2>
-        <p>
-          When a build fails with “exit code 2,” I’d start by checking the full build logs to identify where it failed — often due to syntax errors, missing dependencies, or incorrect scripts.
-          Since I can’t access the private repository, I’d ask the customer to share their build command, package.json, and framework.
-        </p>
-        <p>
-          <strong>Sample first response to the customer:</strong><br />
-          “Hi there! I noticed your site build failed with exit code 2. Could you please share your build command
-          and framework details? I’ll review the logs and help you get it building again as soon as possible.”
-        </p>
-      </section>
+        <section>
+          <h2>7. HTTP 301 redirect rule</h2>
+          <pre className="code-block">
+            /netlify/anything https://www.google.com/search?q=anything 301!
+          </pre>
+          <p>
+            This rule redirects any path under <code>/netlify/</code> to Google
+            Search with the query parameter.
+          </p>
+        </section>
 
-      <section>
-        <h2>7. Redirect Setup</h2>
-        <p><strong>301 Redirect:</strong></p>
-        <pre>/netlify/:anything  https://www.google.com/search?q=:anything  301</pre>
+        <section>
+          <h2>8. Function deployment</h2>
+          <p>
+            I deployed a simple “Hello World” function to test Netlify
+            Functions. It worked locally, and if it failed on deploy, I would
+            check build logs and Netlify’s function logs to diagnose the issue.
+          </p>
+        </section>
 
-        <p><strong>Proxy Redirect:</strong></p>
-        <pre>/api/*  https://example.com/:splat  200</pre>
-      </section>
+        <section>
+          <h2>9. Security issue report scenario</h2>
+          <p>
+            I would first acknowledge and thank the reporter for their
+            responsible disclosure. I’d attempt to verify the issue internally
+            and escalate it to the engineering and security teams. My response
+            would assure them that Netlify takes all reports seriously and will
+            follow up once it’s confirmed or mitigated.
+          </p>
+        </section>
+      </main>
 
-      <section>
-        <h2>8. Deploy Function Experience</h2>
-        <p>
-          I tried deploying a simple “Hello World” function in the <code>netlify/functions</code> folder.
-          The process was straightforward once I followed the documentation, but I initially ran into a path issue.
-          I resolved it by checking the Netlify deploy logs and adjusting my function directory structure.
-        </p>
-      </section>
-
-      <section>
-        <h2>9. Handling a Severe Security Report</h2>
-        <p>
-          If I received a report about a severe security issue on Netlify’s main site, I’d immediately acknowledge the report,
-          thank the reporter, and inform them that our team is investigating. Even if not yet confirmed,
-          I’d reassure them that security is a top priority and we value responsible disclosure.
-        </p>
-        <p>
-          I’d then collect logs, attempt to reproduce the issue safely, and escalate it to the internal
-          security or engineering teams for validation and resolution.
-        </p>
-      </section>
+      <footer className="footer">
+        <p>© 2025 Prince Leonard Maala | Created for the Netlify Assessment</p>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
